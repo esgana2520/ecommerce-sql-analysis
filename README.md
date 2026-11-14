@@ -6,7 +6,11 @@ The goal is to answer the questions a commercial or operations team would actual
 
 ## Key findings
 
-Based on 96k delivered orders and R$ 13.2M in revenue (item prices, excluding freight). Full results are in [`output/`](output/).
+Based on 96k delivered orders and R$ 13.2M in revenue (item prices, excluding freight). Full results are in [`output/`](output/), and all charts are in the [analysis notebook](notebooks/analysis.ipynb).
+
+![Late delivery vs review scores](images/04_late_delivery_reviews.png)
+
+![Share of revenue by seller decile](images/06_seller_concentration.png)
 
 1. **Almost nobody comes back.** 97% of customers bought exactly once, and they account for 94.5% of revenue. In every monthly cohort, under 1% of customers return in any given later month. Growth depends almost entirely on acquiring new customers. ([Q3](sql/03_cohort_retention.sql), [Q5](sql/05_repeat_purchase.sql))
 2. **Late delivery destroys satisfaction.** Orders delivered on time average 4.29 stars, with 9% bad reviews (1–2 stars). Orders more than 7 days late average 1.70 stars, with 79% bad reviews. Only 8% of orders arrive late, but the damage starts to show after 3 days of delay. ([Q7](sql/07_late_delivery_vs_reviews.sql))
@@ -79,18 +83,22 @@ python scripts/run_analysis.py
 
 Results are printed and exported to `output/` as CSV. To run a single query: `python scripts/run_analysis.py 03`.
 
+To rebuild the charts, open `notebooks/analysis.ipynb` in Jupyter and run all cells.
+
 No Kaggle account? `python scripts/make_sample_data.py` writes a small **synthetic** dataset with the same schema, so the pipeline can be tested end to end. Its numbers are random; the findings above come from the real data.
 
 ## Tech stack
 
 - **SQL** on [DuckDB](https://duckdb.org/) — an embedded analytical database, so the project runs with no server to install. The queries use standard SQL (CTEs, window functions) and port to PostgreSQL with minor changes to date functions.
-- **Python** for loading the data and running the queries.
+- **Python** (pandas, matplotlib, Jupyter) for loading the data, running the queries and charting the results.
 
 ## Project structure
 
 ```
 ├── sql/        analysis queries (one business question per file)
 ├── scripts/    download, load and run scripts
+├── notebooks/  analysis notebook with the charts
+├── images/     charts exported by the notebook
 ├── data/raw/   Olist CSV files (not committed)
 └── output/     query results as CSV
 ```
