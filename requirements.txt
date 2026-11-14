@@ -1,0 +1,5 @@
+duckdb>=1.1
+pandas>=2.2
+matplotlib>=3.9
+jupyter>=1.1
+kaggle>=1.6

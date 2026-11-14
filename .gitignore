@@ -1,0 +1,17 @@
+# Raw data is downloaded from Kaggle, not committed
+data/raw/*.csv
+data/raw/*.zip
+data/*.duckdb
+data/*.duckdb.wal
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

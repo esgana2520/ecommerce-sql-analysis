@@ -1,0 +1,8 @@
+segment,customers,customer_share_pct,revenue,revenue_share_pct,avg_spend,avg_recency_days,avg_orders
+High-value new,14494,15.5,3868370.07,29.3,266.89,91.0,1.0
+At risk (high value),13817,14.8,3819210.04,28.9,276.41,395.0,1.0
+Needs attention,18068,19.4,2349480.42,17.8,130.04,219.0,1.0
+Lost,22532,24.1,1255174.19,9.5,55.71,394.0,1.0
+Recent low-spend,21646,23.2,1200854.64,9.1,55.48,89.0,1.0
+Loyal,1869,2.0,423101.57,3.2,226.38,285.0,2.08
+Champions,932,1.0,305307.18,2.3,327.58,88.0,2.19

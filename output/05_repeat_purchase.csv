@@ -1,0 +1,4 @@
+purchase_frequency,customers,customer_share_pct,revenue,revenue_share_pct,avg_lifetime_value
+1 order,90557,97.0,12493089.36,94.49,137.96
+2 orders,2573,2.76,631274.9,4.77,245.35
+3+ orders,228,0.24,97133.85,0.73,426.03

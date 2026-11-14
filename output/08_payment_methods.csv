@@ -1,0 +1,8 @@
+main_payment_type,installments_bucket,orders,order_share_pct,total_paid,paid_share_pct,avg_order_paid
+credit_card,7+,11751,12.2,3927844.0,25.5,334.26
+credit_card,2-3,22020,22.8,2971882.11,19.3,134.96
+credit_card,4-6,15696,16.3,2852287.41,18.5,181.72
+boleto,n/a,19191,19.9,2769932.58,18.0,144.33
+credit_card,1 (single payment),23358,24.2,2350192.64,15.2,100.62
+voucher,n/a,2977,3.1,341951.91,2.2,114.86
+debit_card,n/a,1484,1.5,208371.12,1.4,140.41
